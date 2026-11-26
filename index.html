@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Vibes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <dialog class="letter-intro" id="letter-intro" aria-label="Surat untuk Charline">
+    <div class="intro-scene">
+      <button class="intro-envelope" type="button" aria-label="Masuk ke website">
+        <span class="intro-envelope-back" aria-hidden="true"></span>
+        <span class="intro-envelope-front" aria-hidden="true"></span>
+        <span class="intro-envelope-flap" aria-hidden="true"></span>
+        <span class="intro-envelope-label" aria-hidden="true">FOR CHARLINE</span>
+        <span class="intro-envelope-seal" aria-hidden="true">&hearts;</span>
+      </button>
+      <p class="intro-hint">Ketuk amplop untuk masuk</p>
+    </div>
+  </dialog>
+
+  <main>
+    <section class="scene hero-scene" id="home">
+      <div class="hero-ornaments" aria-hidden="true">
+        <div class="hero-stickers">
+          <img class="hero-sticker" src="img/stickers/charline-peace.png" alt="">
+          <img class="hero-sticker" src="img/stickers/memory-sticker-03.png" alt="">
+          <img class="hero-sticker" src="img/stickers/memory-sticker-09.png" alt="">
+          <img class="hero-sticker" src="img/stickers/charline-thumbs-up.png" alt="">
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">FOR CHARLINE, FROM HOME</p>
+        <h1 aria-label="Different Time Zones, Same Friendship">
+          <span class="scatter-word word-one" aria-hidden="true">Different Time Zones,</span>
+          <span class="scatter-word word-two" aria-hidden="true">Same Friendship.</span>
+        </h1>
+        <p class="hero-subtitle">Sending our love, pride, and best wishes as Charelene begins a new academic chapter in Singapore.</p>
+        <a class="scroll-cue" href="#interlude" aria-label="Lanjut ke section berikutnya">
+          <span class="envelope-flap" aria-hidden="true"></span>
+          <span class="envelope-seal" aria-hidden="true"></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="scene interlude-scene" id="interlude" aria-labelledby="letter-section-title">
+      <div class="letter-stickers" aria-hidden="true">
+        <img class="letter-sticker" src="img/stickers/charline-phone.png" alt="">
+        <img class="letter-sticker" src="img/stickers/memory-sticker-04.png" alt="">
+        <img class="letter-sticker" src="img/stickers/memory-sticker-05.png" alt="">
+        <img class="letter-sticker" src="img/stickers/memory-sticker-06.png" alt="">
+        <img class="letter-sticker" src="img/stickers/memory-sticker-10.png" alt="">
+        <img class="letter-sticker" src="img/stickers/memory-sticker-13.png" alt="">
+        <img class="letter-sticker" src="img/stickers/memory-sticker-17.png" alt="">
+        <img class="letter-sticker" src="img/stickers/memory-sticker-18.png" alt="">
+      </div>
+
+      <div class="letter-section-content">
+        <div class="letter-section-copy">
+          <p class="letter-kicker">SEALED WITH LOVE</p>
+          <h2 id="letter-section-title">A letter from home</h2>
+          <p>A little note for the next chapter of your journey.</p>
+          <p class="letter-instruction">Tap the envelope to read it</p>
+        </div>
+
+        <div class="message-stage">
+          <button class="message-envelope" type="button" aria-controls="friend-letter-dialog" aria-expanded="false" aria-label="Buka surat untuk Charline">
+            <span class="message-envelope-back" aria-hidden="true"></span>
+            <span class="message-envelope-front" aria-hidden="true"></span>
+            <span class="message-envelope-flap" aria-hidden="true"></span>
+            <span class="message-envelope-address" aria-hidden="true">For Charline</span>
+            <span class="message-envelope-seal" aria-hidden="true">&hearts;</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene gallery-scene" id="museum-gallery" aria-labelledby="gallery-title">
+      <div class="scene-content">
+        <h2 class="section-title reveal" id="gallery-title">Museum Gallery</h2>
+        <div class="gallery-choices">
+          <button class="media-card reveal is-active" type="button" data-gallery-target="photo-panel" aria-controls="photo-panel" aria-pressed="true">
+            <span>Foto</span>
+          </button>
+          <button class="media-card reveal" type="button" data-gallery-target="video-panel" aria-controls="video-panel" aria-pressed="false">
+            <span>Video</span>
+          </button>
+        </div>
+        <a class="gallery-source-link" href="https://drive.google.com/drive/folders/1q0IkhhsN5nwQPRIvj5-QsR0dNz7rHLq4" target="_blank" rel="noopener noreferrer">Lihat folder asal di Google Drive</a>
+
+        <div class="gallery-media-panel reveal" id="photo-panel" role="region" aria-label="Galeri foto">
+          <div class="gallery-grid"></div>
+        </div>
+
+        <div class="gallery-media-panel reveal" id="video-panel" role="region" aria-label="Galeri video" hidden>
+          <div class="video-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="scene film-scene" id="film" aria-labelledby="film-title">
+      <div class="film-content">
+        <div class="film-copy">
+          <p class="film-kicker">A LITTLE MEMORY IN MOTION</p>
+          <h2 class="section-title" id="film-title">Film</h2>
+          <p>One little moment, kept close.</p>
+        </div>
+        <a class="film-video-card" data-film-video target="_blank" rel="noopener noreferrer">
+          <img alt="" loading="lazy" decoding="async">
+          <span>Watch on Google Drive</span>
+        </a>
+        <div class="film-stickers" aria-hidden="true">
+          <img class="film-sticker" src="img/stickers/memory-sticker-11.png" alt="">
+          <img class="film-sticker" src="img/stickers/memory-sticker-12.png" alt="">
+          <img class="film-sticker" src="img/stickers/memory-sticker-14.png" alt="">
+          <img class="film-sticker" src="img/stickers/memory-sticker-15.png" alt="">
+          <img class="film-sticker" src="img/stickers/memory-sticker-16.png" alt="">
+          <img class="film-sticker" src="img/stickers/memory-sticker-19.png" alt="">
+          <img class="film-sticker" src="img/stickers/charline-cap.png" alt="">
+          <img class="film-sticker" src="img/stickers/memory-sticker-20.png" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+  <dialog class="friend-letter-dialog" id="friend-letter-dialog" aria-labelledby="friend-letter-title">
+    <button class="friend-letter-close" type="button" aria-label="Tutup surat">&times;</button>
+    <article class="friend-letter-paper">
+      <p class="message-letter-label">FOR YOUR NEW CHAPTER</p>
+      <h2 id="friend-letter-title">Dear Charline,</h2>
+      <p>As you begin this new chapter in Singapore, we hope it brings you joy, new adventures, and people who feel like home.</p>
+      <p>No matter the distance, we’ll always be cheering you on. We’re so proud of you.</p>
+      <p class="message-letter-signoff">With all our love,<br>Your friends from home</p>
+      <span class="message-letter-stamp" aria-hidden="true">&hearts;</span>
+    </article>
+  </dialog>
+  <dialog class="media-viewer" id="media-viewer" aria-label="Pratinjau media">
+    <button class="viewer-close" type="button" aria-label="Tutup pratinjau">&times;</button>
+    <div class="viewer-stage">
+      <div class="viewer-cover" aria-hidden="true">
+        <svg class="viewer-photo-mark" viewBox="0 0 48 48">
+          <rect x="7" y="7" width="34" height="34" rx="4"/>
+          <circle cx="18" cy="18" r="3"/>
+          <path d="m11 35 10-10 7 7 5-5 5 5"/>
+        </svg>
+        <span class="viewer-play-mark"></span>
+      </div>
+      <img class="viewer-image" alt="" hidden>
+      <video class="viewer-video" controls playsinline hidden></video>
+    </div>
+  </dialog>
+  <script src="gallery-media.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
