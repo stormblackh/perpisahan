@@ -690,9 +690,21 @@ body {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     align-items: start;
     gap: 1rem;
+}
+
+/* Masonry via JS: foto tampil dengan rasio aslinya tanpa ter-crop */
+.gallery-grid.is-masonry {
+    position: relative;
+    display: block;
+}
+
+.gallery-grid.is-masonry .photo-space {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .gallery-choices {
@@ -821,6 +833,7 @@ body {
     aspect-ratio: 1.15;
     padding: 0;
     border: 8px solid #fff4e8;
+    border-width: 8px 8px 24px;
     border-radius: 0.25rem;
     background: #fff4e8;
     box-shadow: 0 5px 16px rgba(30, 18, 19, 0.24);
@@ -908,6 +921,7 @@ body {
     font-size: 0.75rem;
 }
 
+/* ===== Sistem stiker scrapbook ===== */
 .film-stickers,
 .hero-stickers,
 .letter-stickers {
@@ -917,160 +931,208 @@ body {
     pointer-events: none;
 }
 
-.film-stickers {
-    inset: -5rem -2rem;
-}
-
-.film-sticker,
 .hero-sticker,
-.letter-sticker {
+.letter-sticker,
+.film-sticker {
     position: absolute;
-    max-width: none;
-    max-height: none;
-    height: clamp(160px, 30svh, 235px);
+    width: clamp(150px, 17vw, 215px);
+    height: clamp(150px, 21svh, 205px);
     object-fit: contain;
-    filter: drop-shadow(0 12px 12px rgba(25, 12, 14, 0.3));
+    filter: drop-shadow(0 10px 14px rgba(25, 12, 14, 0.32));
 }
 
+/* Stiker pada section film dibuat lebih besar karena areanya lebih lega */
+.film-sticker {
+    width: clamp(160px, 19vw, 245px);
+    height: clamp(160px, 23svh, 235px);
+}
+
+/* Foto yang belum die-cut ditampilkan sebagai polaroid agar terlihat rapi */
+.hero-sticker.is-photo,
+.letter-sticker.is-photo,
+.film-sticker.is-photo {
+    height: auto;
+    max-height: clamp(240px, 32svh, 300px);
+    object-fit: cover;
+    padding: 8px 8px 30px;
+    border: 1px solid rgba(52, 20, 16, 0.08);
+    border-radius: 4px;
+    background: linear-gradient(180deg, #fffdf8 0%, #f6ead9 100%);
+    box-shadow: 0 14px 22px rgba(25, 12, 14, 0.35);
+    filter: none;
+}
+
+/* Polaroid pada section film dibuat lebih besar mengikuti stiker film */
+.film-sticker.is-photo {
+    max-height: clamp(210px, 27svh, 265px);
+}
+
+/* ---- Hero ---- */
 .hero-sticker:first-child {
-    top: -34px;
-    left: -32px;
-    width: clamp(165px, 20vw, 235px);
-    transform: rotate(-11deg);
+    top: 2%;
+    left: 2%;
+    transform: rotate(-8deg);
 }
 
 .hero-sticker:nth-child(2) {
-    top: -20px;
-    left: 24%;
-    width: clamp(145px, 17vw, 195px);
-    transform: rotate(8deg);
+    top: 3%;
+    left: 27%;
+    width: clamp(115px, 12vw, 150px);
+    transform: rotate(7deg);
 }
 
 .hero-sticker:nth-child(3) {
-    top: -16px;
-    right: -42px;
-    width: clamp(170px, 19vw, 225px);
-    transform: rotate(10deg);
+    top: 2.5%;
+    right: 3%;
+    transform: rotate(9deg);
 }
 
 .hero-sticker:nth-child(4) {
-    top: 45%;
-    left: -78px;
-    width: clamp(195px, 21vw, 240px);
-    transform: rotate(9deg);
+    top: 38%;
+    left: 1%;
+    width: clamp(160px, 18vw, 230px);
+    transform: rotate(-6deg);
 }
 
 .hero-sticker:nth-child(5) {
-    bottom: -60px;
-    left: -48px;
-    width: clamp(195px, 21vw, 245px);
-    transform: rotate(-8deg);
+    bottom: 2%;
+    left: 3.5%;
+    transform: rotate(6deg);
 }
 
 .hero-sticker:nth-child(6) {
-    right: -60px;
-    bottom: -52px;
-    width: clamp(195px, 21vw, 245px);
-    transform: rotate(9deg);
-}
-
-.letter-sticker:first-child {
-    top: -65px;
-    left: -20px;
-    width: clamp(135px, 15vw, 170px);
-    transform: rotate(-10deg);
-}
-
-.letter-sticker:nth-child(2) {
-    top: -48px;
-    left: 39%;
-    width: clamp(135px, 16vw, 185px);
-    transform: rotate(7deg);
-}
-
-.letter-sticker:nth-child(3) {
-    top: -100px;
-    right: -110px;
-    width: clamp(150px, 17vw, 190px);
-    transform: rotate(9deg);
-}
-
-.letter-sticker:nth-child(4) {
-    top: 42%;
-    left: -145px;
-    width: clamp(140px, 16vw, 175px);
-    transform: rotate(8deg);
-}
-
-.letter-sticker:nth-child(5) {
-    top: 73%;
-    right: -100px;
-    width: clamp(150px, 17vw, 190px);
-    transform: rotate(-9deg);
-}
-
-.letter-sticker:nth-child(6) {
-    bottom: -100px;
-    left: -120px;
-    width: clamp(155px, 18vw, 205px);
-    transform: rotate(7deg);
-}
-
-.letter-sticker:nth-child(7) {
-    bottom: -120px;
-    left: 40%;
-    width: clamp(125px, 14vw, 165px);
+    bottom: 2%;
+    right: 2.5%;
     transform: rotate(-7deg);
 }
 
+/* ---- Letter ---- */
+.letter-sticker:first-child {
+    top: 3%;
+    left: 2%;
+    width: clamp(140px, 15vw, 190px);
+    transform: rotate(-8deg);
+}
+
+.letter-sticker:nth-child(2) {
+    bottom: 2%;
+    left: 30%;
+    width: clamp(115px, 11vw, 140px);
+    transform: rotate(5deg);
+}
+
+.letter-sticker:nth-child(3) {
+    top: 3%;
+    right: 2%;
+    width: clamp(95px, 9vw, 115px);
+    transform: rotate(-6deg);
+}
+
+/* Stiker ke-4 dan ke-5: di tengah atas & tengah bawah agar aman
+   di semua lebar layar, lalu pindah ke pinggir tengah di layar lebar */
+.letter-sticker:nth-child(4) {
+    top: 2%;
+    left: 38%;
+    width: clamp(120px, 11vw, 150px);
+    transform: rotate(5deg);
+}
+
+.letter-sticker:nth-child(5) {
+    bottom: 2.5%;
+    left: 60%;
+    width: clamp(115px, 11vw, 140px);
+    transform: rotate(-6deg);
+}
+
+@media (max-width: 1100px) {
+    /* Stiker pinggir kiri film menabrak teks di layar sempit */
+    .film-sticker:nth-child(3) {
+        display: none;
+    }
+}
+
+@media (min-width: 1400px) {
+    .letter-sticker:nth-child(4) {
+        top: 40%;
+        left: 1%;
+        width: clamp(125px, 9.5vw, 145px);
+        transform: rotate(8deg);
+    }
+
+    .letter-sticker:nth-child(5) {
+        bottom: auto;
+        top: 41%;
+        right: 1%;
+        left: auto;
+        width: clamp(125px, 9.5vw, 145px);
+        transform: rotate(-8deg);
+    }
+}
+
+.letter-sticker:nth-child(6) {
+    bottom: 3%;
+    left: 2%;
+    width: clamp(140px, 15vw, 190px);
+    transform: rotate(6deg);
+}
+
+.letter-sticker:nth-child(7) {
+    bottom: 2.5%;
+    left: 46%;
+    width: clamp(100px, 10vw, 125px);
+    transform: rotate(-5deg);
+}
+
 .letter-sticker:nth-child(8) {
-    right: -110px;
-    bottom: -130px;
-    width: clamp(155px, 18vw, 205px);
-    transform: rotate(10deg);
-}
-
-.film-sticker:first-child {
-    top: -65px;
-    left: -32px;
-    width: clamp(175px, 20vw, 230px);
-    transform: rotate(-10deg);
-}
-
-.film-sticker:nth-child(2) {
-    top: 450px;
-    right: -200px;
-    width: clamp(185px, 21vw, 240px);
-    transform: rotate(0deg);
-}
-
-.film-sticker:nth-child(3) {
-    top: 45%;
-    left: -160px;
-    width: clamp(190px, 22vw, 250px);
+    bottom: 3%;
+    right: 2.5%;
+    width: clamp(140px, 15vw, 185px);
     transform: rotate(8deg);
 }
 
+/* ---- Film ---- */
+.film-sticker:first-child {
+    top: 2%;
+    left: 1.5%;
+    width: clamp(140px, 15vw, 185px);
+    transform: rotate(-9deg);
+}
+
+.film-sticker:nth-child(2) {
+    top: 1.5%;
+    left: 38%;
+    width: clamp(130px, 13vw, 165px);
+    transform: rotate(6deg);
+}
+
+.film-sticker:nth-child(3) {
+    top: 30%;
+    left: 1%;
+    width: clamp(88px, 8vw, 105px);
+    transform: rotate(5deg);
+}
+
 .film-sticker:nth-child(4) {
-    top: 80%;
-    right: 1120px;
-    width: clamp(190px, 22vw, 250px);
-    /* transform: rotate(0deg); */
+    bottom: 2.5%;
+    left: 2%;
+    width: clamp(115px, 11vw, 135px);
+    transform: rotate(-5deg);
 }
 
 .film-sticker:nth-child(5) {
-    bottom: -62px;
-    left: 4%;
-    width: clamp(185px, 20vw, 230px);
-    transform: rotate(7deg);
+    bottom: 1.5%;
+    right: 1.5%;
+    width: clamp(120px, 12vw, 150px);
+    transform: rotate(6deg);
 }
 
 .film-sticker:nth-child(6) {
-    right: 4%;
-    bottom: -68px;
-    width: clamp(185px, 20vw, 235px);
-    transform: rotate(-8deg);
+    top: 1%;
+    right: 1.5%;
+    width: clamp(120px, 11.5vw, 145px);
+    transform: rotate(-6deg);
 }
+
 .media-viewer {
     position: fixed;
     top: 50%;
@@ -1340,79 +1402,142 @@ body.has-scroll-reveal .reveal.is-visible {
         margin: auto;
     }
 
-    .film-stickers {
-        inset: -3rem -1rem;
+    .hero-sticker,
+    .letter-sticker,
+    .film-sticker {
+        width: clamp(85px, 25vw, 120px);
+        height: clamp(92px, 14svh, 130px);
     }
 
-    .hero-sticker:first-child,
-    .letter-sticker:first-child,
-    .film-sticker:first-child {
-        top: -36px;
-        left: -22px;
-        width: clamp(108px, 30vw, 125px);
-        height: clamp(105px, 24svh, 150px);
+    .hero-sticker.is-photo,
+    .letter-sticker.is-photo,
+    .film-sticker.is-photo {
+        width: clamp(80px, 22vw, 105px);
+        max-height: 30svh;
+        padding: 5px 5px 18px;
+    }
+
+    .hero-sticker:first-child {
+        top: 1%;
+        left: 2%;
+        transform: rotate(-7deg);
     }
 
     .hero-sticker:nth-child(2),
-    .letter-sticker:nth-child(2),
-    .film-sticker:nth-child(2) {
-        top: -36px;
-        right: 32%;
-        left: auto;
-        width: clamp(92px, 25vw, 105px);
-        height: clamp(105px, 24svh, 150px);
+    .hero-sticker:nth-child(4) {
+        display: none;
     }
 
-    .hero-sticker:nth-child(3),
+    .hero-sticker:nth-child(3) {
+        top: 1%;
+        right: 2%;
+        transform: rotate(8deg);
+    }
+
+    .hero-sticker:nth-child(5) {
+        bottom: 1.5%;
+        left: 2%;
+        transform: rotate(6deg);
+    }
+
+    .hero-sticker:nth-child(6) {
+        bottom: 1.5%;
+        right: 2%;
+        transform: rotate(-6deg);
+    }
+
+    .letter-sticker:first-child {
+        top: 1%;
+        left: 2%;
+        width: clamp(80px, 22vw, 100px);
+        transform: rotate(-7deg);
+    }
+
+    .letter-sticker:nth-child(2) {
+        top: 1%;
+        right: 3%;
+        left: auto;
+        width: clamp(70px, 19vw, 88px);
+        bottom: auto;
+        transform: rotate(6deg);
+    }
+
+    /* Stiker ke-4 (potongan tinggi) berdiri di tengah atas,
+       stiker ke-5 di tengah bawah agar tidak menabrak surat */
+    .letter-sticker:nth-child(4) {
+        top: 0.5%;
+        left: 40%;
+        width: clamp(58px, 15vw, 72px);
+        height: auto;
+        transform: rotate(4deg);
+    }
+
+    .letter-sticker:nth-child(5) {
+        bottom: 1.5%;
+        left: 32%;
+        top: auto;
+        width: clamp(80px, 21vw, 100px);
+        transform: rotate(-6deg);
+    }
+
     .letter-sticker:nth-child(3),
-    .film-sticker:nth-child(3) {
-        top: -36px;
-        right: -22px;
-        width: clamp(108px, 30vw, 125px);
-        height: clamp(105px, 24svh, 150px);
-    }
-
-    .hero-sticker:nth-child(4),
-    .letter-sticker:nth-child(4),
-    .film-sticker:nth-child(4) {
-        top: 42%;
-        left: -200px;
-        width: 190px;
-        height: 150px;
-    }
-
-    .hero-sticker:nth-child(5),
-    .letter-sticker:nth-child(6),
-    .film-sticker:nth-child(5) {
-        bottom: -55px;
-        left: -80px;
-        width: clamp(112px, 32vw, 145px);
-        height: clamp(105px, 24svh, 150px);
-    }
-
-    .hero-sticker:nth-child(6),
-    .letter-sticker:nth-child(8),
-    .film-sticker:nth-child(6) {
-        right: -80px;
-        bottom: -58px;
-        width: clamp(112px, 32vw, 145px);
-        height: clamp(105px, 24svh, 150px);
-    }
-
-    .letter-sticker:nth-child(5),
-    .film-sticker:nth-child(4) {
-        right: -150px;
-        left: auto;
-        width: 190px;
-        height: 150px;
-    }
-
     .letter-sticker:nth-child(7) {
         display: none;
     }
 
-    .hero-sticker:nth-child(4) {
+    .letter-sticker:nth-child(6) {
+        bottom: 1.5%;
+        left: 2%;
+        width: clamp(80px, 22vw, 100px);
+        transform: rotate(6deg);
+    }
+
+    .letter-sticker:nth-child(8) {
+        bottom: 1.5%;
+        right: 2%;
+        width: clamp(85px, 23vw, 105px);
+        transform: rotate(-6deg);
+    }
+
+    .film-video-card {
+        width: min(100%, 560px);
+    }
+
+    .film-sticker:first-child {
+        top: 1%;
+        left: 2%;
+        transform: rotate(-8deg);
+    }
+
+    .film-sticker:nth-child(2) {
+        top: 1.5%;
+        right: 3%;
+        left: auto;
+        width: clamp(92px, 24vw, 118px);
+        transform: rotate(7deg);
+    }
+
+    .film-sticker:nth-child(3) {
         display: none;
+    }
+
+    .film-sticker:nth-child(4) {
+        bottom: 1.5%;
+        left: 3%;
+        width: clamp(95px, 24vw, 120px);
+        transform: rotate(5deg);
+    }
+
+    .film-sticker:nth-child(5) {
+        display: none;
+    }
+
+    .film-sticker:nth-child(6) {
+        top: auto;
+        bottom: 1%;
+        right: 3%;
+        width: clamp(85px, 21vw, 105px);
+        transform: rotate(6deg);
     }
 }
 
@@ -1450,7 +1575,7 @@ body.has-scroll-reveal .reveal.is-visible {
     }
 
     .photo-space {
-        border-width: 6px;
+        border-width: 6px 6px 18px;
     }
 
 }
@@ -1521,6 +1646,20 @@ body.has-scroll-reveal .reveal.is-visible {
 
     .friend-letter-dialog {
         max-height: 90svh;
+    }
+}
+
+@media (max-height: 840px) {
+    .hero-sticker,
+    .letter-sticker,
+    .film-sticker {
+        height: clamp(120px, 18svh, 165px);
+    }
+
+    .hero-sticker.is-photo,
+    .letter-sticker.is-photo,
+    .film-sticker.is-photo {
+        max-height: clamp(200px, 26svh, 250px);
     }
 }
 
