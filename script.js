@@ -97,16 +97,61 @@ galleryMedia.photos.forEach((photo) => {
     button.type = "button";
     button.dataset.mediaKind = "photo";
     button.dataset.mediaSrc = photo.src;
+    button.dataset.aspect = String(photo.width / photo.height);
     button.setAttribute("aria-label", `Perbesar ${photo.alt}`);
 
     const image = document.createElement("img");
     image.src = photo.src;
     image.alt = "";
+    image.width = photo.width;
+    image.height = photo.height;
     image.loading = "lazy";
     image.decoding = "async";
     button.append(image);
     photoGrid.append(button);
 });
+
+/* Masonry: foto tersusun mengikuti rasio aslinya supaya tidak ter-crop
+   dan tampil lebih besar dari grid lama yang memaksakan rasio. */
+function layoutGalleryMasonry() {
+    const items = Array.from(photoGrid.children);
+    if (!items.length || !photoGrid.clientWidth) {
+        return;
+    }
+
+    const isCompact = window.matchMedia("(max-width: 700px)").matches;
+    const gap = isCompact ? 10 : 16;
+    const containerWidth = photoGrid.clientWidth;
+    const columns = containerWidth >= 1000 ? 3 : 2;
+    const columnWidth = (containerWidth - gap * (columns - 1)) / columns;
+    const columnHeights = new Array(columns).fill(0);
+
+    photoGrid.classList.add("is-masonry");
+
+    items.forEach((item) => {
+        const aspect = Number.parseFloat(item.dataset.aspect) || 1;
+        const itemHeight = columnWidth / aspect;
+        const target = columnHeights.indexOf(Math.min(...columnHeights));
+        const x = target * (columnWidth + gap);
+        const y = columnHeights[target];
+
+        item.style.width = `${columnWidth}px`;
+        item.style.aspectRatio = `${aspect}`;
+        item.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+        columnHeights[target] += itemHeight + gap;
+    });
+
+    photoGrid.style.height = `${Math.max(...columnHeights) - gap}px`;
+}
+
+let masonryResizeTimer;
+
+window.addEventListener("resize", () => {
+    window.clearTimeout(masonryResizeTimer);
+    masonryResizeTimer = window.setTimeout(layoutGalleryMasonry, 120);
+});
+
+layoutGalleryMasonry();
 
 galleryMedia.videos.forEach((video) => {
     const link = document.createElement("a");
@@ -175,6 +220,10 @@ galleryCards.forEach((card) => {
         galleryPanels.forEach((panel) => {
             panel.hidden = panel.id !== panelId;
         });
+
+        if (panelId === "photo-panel") {
+            layoutGalleryMasonry();
+        }
     });
 });
 
