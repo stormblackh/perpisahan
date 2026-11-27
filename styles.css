@@ -10,11 +10,11 @@ html {
 }
 
 body {
-    color: #fff0df;
+    color: #f6f1e4;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #9e1015;
-    background-image: radial-gradient(rgba(255, 232, 205, 0.04) 0.7px, transparent 0.7px);
+    background-color: #144b52;
+    background-image: radial-gradient(rgba(242, 238, 225, 0.05) 0.7px, transparent 0.7px);
     background-size: 5px 5px;
 }
 
@@ -34,14 +34,14 @@ body {
         radial-gradient(circle at 84% 18%, rgba(255, 255, 255, 0.65) 0 1px, transparent 2px),
         radial-gradient(ellipse at 18% 22%, rgba(255, 246, 248, 0.86), transparent 35%),
         radial-gradient(ellipse at 82% 78%, rgba(222, 229, 248, 0.9), transparent 42%),
-        linear-gradient(135deg, #d9c9e8 0%, #f5dce1 52%, #cbd9ea 100%);
-    color: #741017;
+        linear-gradient(135deg, #cee3dd 0%, #f5e7d3 52%, #d5e4e0 100%);
+    color: #124049;
     opacity: 1;
     transition: opacity 0.4s ease;
 }
 
 .letter-intro::backdrop {
-    background: rgba(37, 3, 7, 0.78);
+    background: rgba(7, 30, 34, 0.82);
     transition: background-color 0.4s ease;
 }
 
@@ -130,7 +130,7 @@ body {
     place-items: center;
     border: 1px solid rgba(255, 246, 232, 0.85);
     border-radius: 50%;
-    background: #9e2730;
+    background: #a8322c;
     box-shadow: 0 4px 12px rgba(60, 10, 12, 0.25);
     color: #ffe8d0;
     font-size: 1.3rem;
@@ -142,12 +142,12 @@ body {
 }
 
 .intro-envelope:focus-visible {
-    outline: 2px solid #741017;
+    outline: 2px solid #124049;
     outline-offset: 10px;
 }
 
 .intro-hint {
-    color: rgba(86, 24, 31, 0.78);
+    color: rgba(18, 61, 67, 0.8);
     font-size: 0.85rem;
     letter-spacing: 0.08em;
 }
@@ -170,7 +170,7 @@ body {
     justify-content: space-between;
     min-height: 3.8rem;
     padding: 0.65rem clamp(1.25rem, 6vw, 6rem);
-    background: #760b10;
+    background: #0a2c31;
     border-bottom: 1px solid rgba(255, 235, 213, 0.3);
     box-shadow: 0 4px 18px rgba(46, 0, 2, 0.28);
 }
@@ -234,9 +234,9 @@ body {
 .hero-scene {
     display: flex;
     align-items: center;
-    background-color: #a70f15;
+    background-color: #144b52;
     background-image:
-        linear-gradient(135deg, rgba(75, 4, 9, 0.72), rgba(137, 13, 20, 0.52)),
+        linear-gradient(135deg, rgba(12, 66, 73, 0.74), rgba(18, 92, 98, 0.5)),
         url("img/WhatsApp Image 2026-11-24 at 21.17.39.jpeg");
     background-position: center;
     background-size: cover;
@@ -247,15 +247,15 @@ body {
     align-items: center;
     padding-block: clamp(3rem, 8vh, 5rem);
     background:
-        radial-gradient(ellipse at 50% 50%, rgba(216, 48, 42, 0.2), transparent 62%),
-        radial-gradient(rgba(255, 224, 192, 0.045) 0.7px, transparent 0.7px),
-        linear-gradient(135deg, #8e0c12 0%, #a4141a 54%, #791016 100%);
+        radial-gradient(ellipse at 50% 50%, rgba(126, 215, 214, 0.18), transparent 62%),
+        radial-gradient(rgba(240, 238, 225, 0.05) 0.7px, transparent 0.7px),
+        linear-gradient(135deg, #0f454c 0%, #17636d 54%, #0d3e44 100%);
     background-size: auto, 5px 5px, auto;
 }
 
 .letter-section-content {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     display: grid;
     grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
     align-items: center;
@@ -270,7 +270,7 @@ body {
 
 .letter-kicker,
 .message-letter-label {
-    color: #edc093;
+    color: #e9c37f;
     font-size: 0.68rem;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -333,7 +333,7 @@ body {
 }
 
 .friend-letter-dialog::backdrop {
-    background: rgba(32, 4, 8, 0.76);
+    background: rgba(7, 28, 32, 0.76);
     backdrop-filter: blur(5px);
 }
 
@@ -507,11 +507,12 @@ body {
 
 .hero-copy {
     position: relative;
+    z-index: 3;
     width: min(100%, 650px);
     margin: 0 auto;
     padding: clamp(2.4rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
     border: 1.5px solid rgba(255, 239, 218, 0.8);
-    background: rgba(99, 5, 10, 0.28);
+    background: rgba(9, 48, 53, 0.35);
     box-shadow: 0 18px 55px rgba(52, 0, 3, 0.18), inset 0 0 0 6px rgba(255, 239, 218, 0.035);
     text-align: center;
 }
@@ -528,7 +529,7 @@ body {
 }
 
 .eyebrow {
-    color: #f0c99e;
+    color: #e9c37f;
     font-size: 0.66rem;
     font-weight: 600;
     letter-spacing: 0.18em;
@@ -567,7 +568,7 @@ body {
     --scatter-x: 32px;
     --scatter-y: 24px;
     --scatter-rotate: 2deg;
-    color: #f4c69f;
+    color: #f2d5a4;
 }
 
 .hero-scene.is-active .word-two {
@@ -600,7 +601,7 @@ body {
     background:
         linear-gradient(34deg, transparent 49.4%, rgba(255, 239, 218, 0.75) 50%, transparent 50.8%),
         linear-gradient(-34deg, transparent 49.4%, rgba(255, 239, 218, 0.75) 50%, transparent 50.8%),
-        #951219;
+        #0f3f45;
     box-shadow: 0 10px 24px rgba(48, 0, 3, 0.3);
     transform: translateX(-50%);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -617,7 +618,7 @@ body {
     left: 0;
     width: 100%;
     height: 65%;
-    background: #bd292e;
+    background: #b3352e;
     clip-path: polygon(0 0, 100% 0, 50% 82%);
     transform-origin: top center;
     transition: transform 0.35s ease;
@@ -661,7 +662,7 @@ body {
     min-height: 100svh;
     align-items: center;
     padding-block: 1.5rem;
-    background: #815c68;
+    background: #124a51;
 }
 
 .gallery-scene .scene-content {
@@ -730,7 +731,7 @@ body {
 .media-card:hover,
 .media-card.is-active {
     background: #fff0df;
-    color: #563a40;
+    color: #123c44;
 }
 
 .media-card:focus-visible {
@@ -789,7 +790,7 @@ body {
     width: 100%;
     aspect-ratio: 4 / 3;
     border-radius: 0.5rem;
-    background: #47363a;
+    background: #2f4a4f;
     overflow: hidden;
     text-decoration: none;
     transition: opacity 0.2s ease;
@@ -858,11 +859,18 @@ body {
 .film-scene {
     display: flex;
     align-items: center;
-    background: #694b53;
+    background-color: #f3e9d5;
+    background-image: radial-gradient(rgba(92, 73, 45, 0.06) 0.7px, transparent 0.7px);
+    background-size: 5px 5px;
+}
+
+.film-scene .section-title {
+    color: #1d3d43;
 }
 
 .film-content {
     position: relative;
+    z-index: 3;
     display: grid;
     width: min(100%, 1120px);
     grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
@@ -877,7 +885,7 @@ body {
 }
 
 .film-kicker {
-    color: #f0c99e;
+    color: #b3352e;
     font-size: 0.65rem;
     font-weight: 600;
     letter-spacing: 0.16em;
@@ -888,7 +896,7 @@ body {
 }
 
 .film-copy > p:last-child {
-    color: rgba(255, 239, 218, 0.82);
+    color: #4d5a5c;
     font-family: Georgia, 'Times New Roman', serif;
 }
 
@@ -897,10 +905,10 @@ body {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
-    border: 7px solid #fff4e8;
+    border: 7px solid #fffdf6;
     border-radius: 0.2rem;
-    background: #302629;
-    box-shadow: 0 12px 30px rgba(28, 12, 16, 0.3);
+    background: #2c3d40;
+    box-shadow: 0 14px 34px rgba(58, 44, 22, 0.35);
     overflow: hidden;
 }
 
@@ -921,7 +929,10 @@ body {
     font-size: 0.75rem;
 }
 
-/* ===== Sistem stiker scrapbook ===== */
+/* ===== Sistem stiker scrapbook: nongol dari pinggir layar =====
+   Tiap stiker ditaruh sesuai isi fotonya: sisi yang ada potongan
+   tegak lurus menghadap keluar layar (tersembunyi), artefak muka/
+   badan yang melayang sudah di-crop rapi dari file-nya. */
 .film-stickers,
 .hero-stickers,
 .letter-stickers {
@@ -935,202 +946,213 @@ body {
 .letter-sticker,
 .film-sticker {
     position: absolute;
-    width: clamp(150px, 17vw, 215px);
-    height: clamp(150px, 21svh, 205px);
+    width: clamp(150px, 16vw, 215px);
+    height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 10px 14px rgba(25, 12, 14, 0.32));
+    filter: drop-shadow(0 14px 20px rgba(6, 18, 22, 0.5));
 }
 
-/* Stiker pada section film dibuat lebih besar karena areanya lebih lega */
-.film-sticker {
-    width: clamp(160px, 19vw, 245px);
-    height: clamp(160px, 23svh, 235px);
-}
-
-/* Foto yang belum die-cut ditampilkan sebagai polaroid agar terlihat rapi */
+/* Foto yang belum die-cut ditampilkan sebagai polaroid */
 .hero-sticker.is-photo,
 .letter-sticker.is-photo,
 .film-sticker.is-photo {
-    height: auto;
-    max-height: clamp(240px, 32svh, 300px);
-    object-fit: cover;
     padding: 8px 8px 30px;
-    border: 1px solid rgba(52, 20, 16, 0.08);
+    border: 1px solid rgba(52, 36, 20, 0.1);
     border-radius: 4px;
-    background: linear-gradient(180deg, #fffdf8 0%, #f6ead9 100%);
-    box-shadow: 0 14px 22px rgba(25, 12, 14, 0.35);
+    background: linear-gradient(180deg, #fffdf8 0%, #f7efe0 100%);
+    box-shadow: 0 16px 26px rgba(6, 18, 22, 0.35);
     filter: none;
 }
 
-/* Polaroid pada section film dibuat lebih besar mengikuti stiker film */
-.film-sticker.is-photo {
-    max-height: clamp(210px, 27svh, 265px);
+/* Crop artefak di-wujudkan lewat CSS supaya file PNG asli tetap
+   dipakai di repo: fragmen gelap, muka melayang, dan potongan
+   lurus dibuang di tampilan, bukan di file-nya */
+.hero-sticker[src*="charline-peace"] {
+    clip-path: inset(0 0 17.85% 0);
 }
 
-/* ---- Hero ---- */
-.hero-sticker:first-child {
-    top: 2%;
-    left: 2%;
-    transform: rotate(-8deg);
+.hero-sticker[src*="memory-sticker-10"] {
+    clip-path: inset(0 36% 0 0);
 }
 
-.hero-sticker:nth-child(2) {
-    top: 3%;
-    left: 27%;
-    width: clamp(115px, 12vw, 150px);
+.letter-sticker[src*="memory-sticker-13"] {
+    clip-path: inset(0 0 0 15.96%);
+}
+
+.letter-sticker[src*="memory-sticker-14"] {
+    clip-path: inset(0 14.88% 6.96% 0);
+}
+
+.film-sticker[src*="memory-sticker-15"] {
+    clip-path: inset(7.83% 0 0 16.9%);
+}
+
+/* Polaroid 11: bingkai tetap di span, isinya di-crop rapi di
+   dalam bingkai (fragmen gelap atas + kanan dibuang) */
+.letter-sticker.is-photo img {
+    display: block;
+    width: 104.167%;
+    margin-left: 0;
+    margin-top: -10.727%;
+    clip-path: inset(8.97% 4% 0 0);
+}
+
+/* ---- Hero: peace TL, cap TR, 03 close-up kiri, 10 pojok BL,
+       phone duduk BL, thumbs BR ---- */
+.hero-sticker:nth-child(1) {
+    top: -4svh;
+    left: 2vw;
+    width: clamp(140px, 15vw, 190px);
     transform: rotate(7deg);
 }
 
-.hero-sticker:nth-child(3) {
-    top: 2.5%;
-    right: 3%;
-    transform: rotate(9deg);
-}
-
-.hero-sticker:nth-child(4) {
-    top: 38%;
-    left: 1%;
-    width: clamp(160px, 18vw, 230px);
+.hero-sticker:nth-child(2) {
+    top: -2.5svh;
+    right: 2vw;
+    width: clamp(140px, 15vw, 185px);
     transform: rotate(-6deg);
 }
 
-.hero-sticker:nth-child(5) {
-    bottom: 2%;
-    left: 3.5%;
-    transform: rotate(6deg);
-}
-
-.hero-sticker:nth-child(6) {
-    bottom: 2%;
-    right: 2.5%;
-    transform: rotate(-7deg);
-}
-
-/* ---- Letter ---- */
-.letter-sticker:first-child {
-    top: 3%;
-    left: 2%;
-    width: clamp(140px, 15vw, 190px);
+.hero-sticker:nth-child(3) {
+    top: 26%;
+    left: -4vw;
+    width: clamp(155px, 16vw, 205px);
     transform: rotate(-8deg);
 }
 
+.hero-sticker:nth-child(4) {
+    bottom: -9svh;
+    left: -4vw;
+    width: clamp(219px, 22.7vw, 289px);
+    transform: rotate(-3deg);
+}
+
+.hero-sticker:nth-child(5) {
+    bottom: -10svh;
+    left: 12%;
+    width: clamp(135px, 14vw, 180px);
+    transform: rotate(3deg);
+}
+
+.hero-sticker:nth-child(6) {
+    bottom: -9svh;
+    right: 2vw;
+    width: clamp(150px, 16vw, 205px);
+    transform: rotate(-6deg);
+}
+
+/* ---- Letter: 05 nongol kiri, 11 polaroid utuh TC, 13 nongol atas,
+       06 disembunyikan, 09 kiri-bawah, 12 bawah-tengah (di belakang
+       amplop), 14 BL, 04 BR ---- */
+/* Stiker 05 (selfie) nongol dari sisi kiri saja: potongan tunggal
+   terlihat disengaja, wajah + ponsel tetap utuh */
+.letter-sticker:nth-child(1) {
+    top: 2.5svh;
+    left: -3vw;
+    width: clamp(125px, 12vw, 160px);
+    transform: rotate(-7deg);
+}
+
+/* Polaroid 11 harus utuh di dalam layar: bingkai polaroid
+   yang kepotong malah terlihat seperti error */
 .letter-sticker:nth-child(2) {
-    bottom: 2%;
-    left: 30%;
-    width: clamp(115px, 11vw, 140px);
-    transform: rotate(5deg);
+    top: 2svh;
+    left: 50%;
+    width: clamp(150px, 15vw, 195px);
+    transform: translateX(-50%) rotate(8deg);
 }
 
+/* Stiker 13 nongol dari atas saja: hanya ujung rambut yang
+   terpotong, wajah (kacamata + masker) aman dari tepi layar */
 .letter-sticker:nth-child(3) {
-    top: 3%;
-    right: 2%;
-    width: clamp(95px, 9vw, 115px);
-    transform: rotate(-6deg);
-}
-
-/* Stiker ke-4 dan ke-5: di tengah atas & tengah bawah agar aman
-   di semua lebar layar, lalu pindah ke pinggir tengah di layar lebar */
-.letter-sticker:nth-child(4) {
-    top: 2%;
-    left: 38%;
-    width: clamp(120px, 11vw, 150px);
-    transform: rotate(5deg);
-}
-
-.letter-sticker:nth-child(5) {
-    bottom: 2.5%;
-    left: 60%;
-    width: clamp(115px, 11vw, 140px);
-    transform: rotate(-6deg);
-}
-
-@media (max-width: 1100px) {
-    /* Stiker pinggir kiri film menabrak teks di layar sempit */
-    .film-sticker:nth-child(3) {
-        display: none;
-    }
-}
-
-@media (min-width: 1400px) {
-    .letter-sticker:nth-child(4) {
-        top: 40%;
-        left: 1%;
-        width: clamp(125px, 9.5vw, 145px);
-        transform: rotate(8deg);
-    }
-
-    .letter-sticker:nth-child(5) {
-        bottom: auto;
-        top: 41%;
-        right: 1%;
-        left: auto;
-        width: clamp(125px, 9.5vw, 145px);
-        transform: rotate(-8deg);
-    }
-}
-
-.letter-sticker:nth-child(6) {
-    bottom: 3%;
-    left: 2%;
-    width: clamp(140px, 15vw, 190px);
-    transform: rotate(6deg);
-}
-
-.letter-sticker:nth-child(7) {
-    bottom: 2.5%;
-    left: 46%;
-    width: clamp(100px, 10vw, 125px);
-    transform: rotate(-5deg);
-}
-
-.letter-sticker:nth-child(8) {
-    bottom: 3%;
-    right: 2.5%;
-    width: clamp(140px, 15vw, 185px);
+    top: -3.5svh;
+    right: 4vw;
+    width: clamp(167px, 16.7vw, 215px);
     transform: rotate(8deg);
 }
 
-/* ---- Film ---- */
-.film-sticker:first-child {
-    top: 2%;
-    left: 1.5%;
-    width: clamp(140px, 15vw, 185px);
-    transform: rotate(-9deg);
+/* Stiker 06 (foto blur) sengaja disembunyikan: kualitas fotonya
+   tidak sekuat yang lain dan malah terlihat seperti kesalahan */
+.letter-sticker:nth-child(4) {
+    display: none;
 }
 
-.film-sticker:nth-child(2) {
-    top: 1.5%;
-    left: 38%;
-    width: clamp(130px, 13vw, 165px);
-    transform: rotate(6deg);
-}
-
-.film-sticker:nth-child(3) {
-    top: 30%;
-    left: 1%;
-    width: clamp(88px, 8vw, 105px);
+.letter-sticker:nth-child(5) {
+    bottom: -2svh;
+    left: -3vw;
+    width: clamp(140px, 14vw, 180px);
     transform: rotate(5deg);
 }
 
+.letter-sticker:nth-child(6) {
+    bottom: -14svh;
+    left: 32%;
+    width: clamp(140px, 14vw, 175px);
+    transform: rotate(-10deg);
+}
+
+.letter-sticker:nth-child(7) {
+    bottom: calc(-5svh - 18px);
+    left: 1.5vw;
+    width: clamp(170px, 17.6vw, 217px);
+    transform: rotate(-6deg);
+}
+
+.letter-sticker:nth-child(8) {
+    bottom: -6svh;
+    right: 1.5vw;
+    width: clamp(150px, 15vw, 195px);
+    transform: rotate(0deg);
+}
+
+/* ---- Film: polaroid 20 TL & 19 TR, 16 bisik-bisik dari kanan,
+       17 BL, 15 grup bawah-tengah, 18 BR ---- */
+.film-scene .film-sticker {
+    filter: drop-shadow(0 14px 20px rgba(74, 54, 26, 0.4));
+}
+
+/* Polaroid 20 & 19 ditaruh utuh di dalam layar: bingkai polaroid
+   yang kepotong tepi layar merusak ilusi "foto masih lengkap" */
+.film-sticker:nth-child(1) {
+    top: 3svh;
+    left: 3vw;
+    width: clamp(150px, 15vw, 195px);
+    transform: rotate(5deg);
+}
+
+.film-sticker:nth-child(2) {
+    top: 4svh;
+    right: 3vw;
+    width: clamp(155px, 15vw, 200px);
+    transform: rotate(-4deg);
+}
+
+.film-sticker:nth-child(3) {
+    top: 28%;
+    right: -3vw;
+    width: clamp(160px, 16vw, 205px);
+    transform: rotate(0deg);
+}
+
 .film-sticker:nth-child(4) {
-    bottom: 2.5%;
-    left: 2%;
-    width: clamp(115px, 11vw, 135px);
-    transform: rotate(-5deg);
+    bottom: -5svh;
+    left: -2vw;
+    width: clamp(125px, 12vw, 160px);
+    transform: rotate(0deg);
 }
 
 .film-sticker:nth-child(5) {
-    bottom: 1.5%;
-    right: 1.5%;
-    width: clamp(120px, 12vw, 150px);
-    transform: rotate(6deg);
+    bottom: -16svh;
+    left: 50%;
+    width: clamp(198px, 20.5vw, 258px);
+    transform: translateX(calc(-50% - 20px)) rotate(-3deg);
 }
 
 .film-sticker:nth-child(6) {
-    top: 1%;
-    right: 1.5%;
-    width: clamp(120px, 11.5vw, 145px);
-    transform: rotate(-6deg);
+    bottom: -7svh;
+    right: -1vw;
+    width: clamp(150px, 15.5vw, 200px);
+    transform: rotate(0deg);
 }
 
 .media-viewer {
@@ -1145,7 +1167,7 @@ body {
     padding: 3.5rem 1rem 1rem;
     overflow: hidden;
     border: 1px solid rgba(255, 239, 218, 0.45);
-    background: #760b10;
+    background: #0a2c31;
     box-shadow: 0 28px 90px rgba(0, 0, 0, 0.4);
     transform: translate(-50%, -50%);
 }
@@ -1206,11 +1228,11 @@ body {
 .viewer-cover {
     display: grid;
     place-items: center;
-    background: linear-gradient(145deg, #c66d61, #773a38);
+    background: linear-gradient(145deg, #5f9d92, #20494f);
 }
 
 .viewer-cover.is-video {
-    background: radial-gradient(ellipse at center, #bd6258, #5f080e 72%);
+    background: radial-gradient(ellipse at center, #4f8d84, #0d353a 72%);
 }
 
 .viewer-image,
@@ -1348,6 +1370,10 @@ body.has-scroll-reveal .reveal.is-visible {
         min-height: 270px;
     }
 
+    .message-stage .message-envelope {
+        height: 74%;
+    }
+
     .friend-letter-dialog {
         width: calc(100vw - 2rem);
         padding: 1.6rem 1.25rem;
@@ -1405,139 +1431,98 @@ body.has-scroll-reveal .reveal.is-visible {
     .hero-sticker,
     .letter-sticker,
     .film-sticker {
-        width: clamp(85px, 25vw, 120px);
-        height: clamp(92px, 14svh, 130px);
+        width: clamp(95px, 26vw, 125px);
     }
 
     .hero-sticker.is-photo,
     .letter-sticker.is-photo,
     .film-sticker.is-photo {
-        width: clamp(80px, 22vw, 105px);
-        max-height: 30svh;
+        width: clamp(90px, 24vw, 115px);
         padding: 5px 5px 18px;
     }
 
-    .hero-sticker:first-child {
-        top: 1%;
-        left: 2%;
-        transform: rotate(-7deg);
-    }
-
-    .hero-sticker:nth-child(2),
+    /* Mobile: cukup 4 stiker terbaik per section, tetap nongol */
+    .hero-sticker:nth-child(3),
     .hero-sticker:nth-child(4) {
         display: none;
     }
 
-    .hero-sticker:nth-child(3) {
-        top: 1%;
-        right: 2%;
-        transform: rotate(8deg);
+    /* Mobile: bleed kecil berbasis piksel agar wajah tidak kepotong,
+       stiker tetap mepet sudut/tepi */
+    .hero-sticker:nth-child(1) {
+        top: -12px;
+        left: -6px;
+    }
+
+    .hero-sticker:nth-child(2) {
+        top: -10px;
+        right: -4px;
     }
 
     .hero-sticker:nth-child(5) {
-        bottom: 1.5%;
-        left: 2%;
-        transform: rotate(6deg);
+        bottom: -14px;
+        left: 24px;
     }
 
     .hero-sticker:nth-child(6) {
-        bottom: 1.5%;
-        right: 2%;
-        transform: rotate(-6deg);
+        bottom: -18px;
+        right: -4px;
     }
 
-    .letter-sticker:first-child {
-        top: 1%;
-        left: 2%;
-        width: clamp(80px, 22vw, 100px);
-        transform: rotate(-7deg);
-    }
-
-    .letter-sticker:nth-child(2) {
-        top: 1%;
-        right: 3%;
-        left: auto;
-        width: clamp(70px, 19vw, 88px);
-        bottom: auto;
-        transform: rotate(6deg);
-    }
-
-    /* Stiker ke-4 (potongan tinggi) berdiri di tengah atas,
-       stiker ke-5 di tengah bawah agar tidak menabrak surat */
-    .letter-sticker:nth-child(4) {
-        top: 0.5%;
-        left: 40%;
-        width: clamp(58px, 15vw, 72px);
-        height: auto;
-        transform: rotate(4deg);
-    }
-
-    .letter-sticker:nth-child(5) {
-        bottom: 1.5%;
-        left: 32%;
-        top: auto;
-        width: clamp(80px, 21vw, 100px);
-        transform: rotate(-6deg);
-    }
-
-    .letter-sticker:nth-child(3),
-    .letter-sticker:nth-child(7) {
+    .letter-sticker:nth-child(2),
+    .letter-sticker:nth-child(4),
+    .letter-sticker:nth-child(5),
+    .letter-sticker:nth-child(6) {
         display: none;
     }
 
-    .letter-sticker:nth-child(6) {
-        bottom: 1.5%;
-        left: 2%;
-        width: clamp(80px, 22vw, 100px);
-        transform: rotate(6deg);
+    .letter-sticker:nth-child(1) {
+        top: 14px;
+        left: -18px;
+    }
+
+    .letter-sticker:nth-child(3) {
+        top: -20px;
+        right: 18px;
+    }
+
+    .letter-sticker:nth-child(7) {
+        bottom: -29px;
+        left: -6px;
     }
 
     .letter-sticker:nth-child(8) {
-        bottom: 1.5%;
-        right: 2%;
-        width: clamp(85px, 23vw, 105px);
-        transform: rotate(-6deg);
+        bottom: -14px;
+        right: -4px;
     }
 
     .film-video-card {
         width: min(100%, 560px);
     }
 
-    .film-sticker:first-child {
-        top: 1%;
-        left: 2%;
-        transform: rotate(-8deg);
-    }
-
-    .film-sticker:nth-child(2) {
-        top: 1.5%;
-        right: 3%;
-        left: auto;
-        width: clamp(92px, 24vw, 118px);
-        transform: rotate(7deg);
-    }
-
-    .film-sticker:nth-child(3) {
-        display: none;
-    }
-
-    .film-sticker:nth-child(4) {
-        bottom: 1.5%;
-        left: 3%;
-        width: clamp(95px, 24vw, 120px);
-        transform: rotate(5deg);
-    }
-
+    .film-sticker:nth-child(3),
     .film-sticker:nth-child(5) {
         display: none;
     }
 
+    .film-sticker:nth-child(1) {
+        top: 14px;
+        left: 10px;
+    }
+
+    .film-sticker:nth-child(2) {
+        top: 14px;
+        right: 8px;
+    }
+
+    .film-sticker:nth-child(4) {
+        bottom: -10px;
+        left: -8px;
+    }
+
     .film-sticker:nth-child(6) {
-        top: auto;
-        bottom: 1%;
-        right: 3%;
-        width: clamp(85px, 21vw, 105px);
-        transform: rotate(6deg);
+        bottom: -16px;
+        right: -6px;
     }
 }
 
@@ -1653,13 +1638,7 @@ body.has-scroll-reveal .reveal.is-visible {
     .hero-sticker,
     .letter-sticker,
     .film-sticker {
-        height: clamp(120px, 18svh, 165px);
-    }
-
-    .hero-sticker.is-photo,
-    .letter-sticker.is-photo,
-    .film-sticker.is-photo {
-        max-height: clamp(200px, 26svh, 250px);
+        width: clamp(125px, 14vw, 175px);
     }
 }
 
