@@ -918,169 +918,158 @@ body {
 }
 
 .film-stickers {
-    inset: -10rem 0 -10rem;
+    inset: -5rem -2rem;
 }
 
 .film-sticker,
 .hero-sticker,
 .letter-sticker {
     position: absolute;
-    max-width: min(18vw, 160px);
-    max-height: min(20svh, 135px);
+    max-width: none;
+    max-height: none;
+    height: clamp(160px, 30svh, 235px);
     object-fit: contain;
-    filter: drop-shadow(0 8px 12px rgba(25, 12, 14, 0.28));
+    filter: drop-shadow(0 12px 12px rgba(25, 12, 14, 0.3));
 }
 
 .hero-sticker:first-child {
-    top: 2%;
-    left: 3%;
-    width: clamp(105px, 12vw, 145px);
-    max-height: min(18svh, 125px);
-    transform: rotate(-5deg);
+    top: -34px;
+    left: -32px;
+    width: clamp(165px, 20vw, 235px);
+    transform: rotate(-11deg);
 }
 
 .hero-sticker:nth-child(2) {
-    top: 4%;
-    left: 28%;
-    width: clamp(88px, 9vw, 115px);
-    max-height: min(18svh, 125px);
-    transform: rotate(4deg);
+    top: -20px;
+    left: 24%;
+    width: clamp(145px, 17vw, 195px);
+    transform: rotate(8deg);
 }
 
 .hero-sticker:nth-child(3) {
-    top: 2%;
-    left: 54%;
-    width: clamp(105px, 11vw, 140px);
-    max-height: min(18svh, 125px);
-    transform: rotate(5deg);
+    top: -16px;
+    right: -42px;
+    width: clamp(170px, 19vw, 225px);
+    transform: rotate(10deg);
 }
 
 .hero-sticker:nth-child(4) {
-    top: 4%;
-    left: 72%;
-    width: clamp(100px, 10vw, 130px);
-    max-height: min(18svh, 125px);
-    transform: rotate(-4deg);
+    top: 45%;
+    left: -78px;
+    width: clamp(195px, 21vw, 240px);
+    transform: rotate(9deg);
+}
+
+.hero-sticker:nth-child(5) {
+    bottom: -60px;
+    left: -48px;
+    width: clamp(195px, 21vw, 245px);
+    transform: rotate(-8deg);
+}
+
+.hero-sticker:nth-child(6) {
+    right: -60px;
+    bottom: -52px;
+    width: clamp(195px, 21vw, 245px);
+    transform: rotate(9deg);
 }
 
 .letter-sticker:first-child {
-    top: 2%;
-    left: 4%;
-    width: clamp(100px, 11vw, 140px);
-    max-height: min(20svh, 130px);
-    transform: rotate(-7deg);
+    top: -65px;
+    left: -20px;
+    width: clamp(135px, 15vw, 170px);
+    transform: rotate(-10deg);
 }
 
 .letter-sticker:nth-child(2) {
-    top: 2%;
-    left: 38%;
-    width: clamp(88px, 9vw, 115px);
-    max-height: min(20svh, 130px);
-    transform: rotate(5deg);
-}
-
-.letter-sticker:nth-child(3) {
-    top: 2%;
-    right: 4%;
-    width: clamp(100px, 11vw, 140px);
-    max-height: min(20svh, 130px);
+    top: -48px;
+    left: 39%;
+    width: clamp(135px, 16vw, 185px);
     transform: rotate(7deg);
 }
 
+.letter-sticker:nth-child(3) {
+    top: -100px;
+    right: -110px;
+    width: clamp(150px, 17vw, 190px);
+    transform: rotate(9deg);
+}
+
 .letter-sticker:nth-child(4) {
-    top: 17%;
-    right: 10%;
-    width: clamp(88px, 9vw, 115px);
-    max-height: min(20svh, 130px);
-    transform: rotate(-6deg);
+    top: 42%;
+    left: -145px;
+    width: clamp(140px, 16vw, 175px);
+    transform: rotate(8deg);
 }
 
 .letter-sticker:nth-child(5) {
-    bottom: 3%;
-    left: 5%;
-    width: clamp(100px, 10vw, 130px);
-    max-height: min(20svh, 130px);
-    transform: rotate(6deg);
+    top: 73%;
+    right: -100px;
+    width: clamp(150px, 17vw, 190px);
+    transform: rotate(-9deg);
 }
 
 .letter-sticker:nth-child(6) {
-    bottom: 2%;
-    left: 42%;
-    width: clamp(88px, 9vw, 115px);
-    max-height: min(20svh, 130px);
-    transform: rotate(-5deg);
+    bottom: -100px;
+    left: -120px;
+    width: clamp(155px, 18vw, 205px);
+    transform: rotate(7deg);
 }
 
 .letter-sticker:nth-child(7) {
-    right: 5%;
-    bottom: 3%;
-    width: clamp(100px, 10vw, 130px);
-    max-height: min(20svh, 130px);
+    bottom: -120px;
+    left: 40%;
+    width: clamp(125px, 14vw, 165px);
     transform: rotate(-7deg);
 }
 
 .letter-sticker:nth-child(8) {
-    top: 17%;
-    left: 40%;
-    width: clamp(65px, 7vw, 85px);
-    max-height: min(20svh, 130px);
-    transform: rotate(6deg);
+    right: -110px;
+    bottom: -130px;
+    width: clamp(155px, 18vw, 205px);
+    transform: rotate(10deg);
 }
 
 .film-sticker:first-child {
-    top: 0;
-    right: 7%;
-    width: clamp(100px, 10vw, 130px);
-    transform: rotate(6deg);
+    top: -65px;
+    left: -32px;
+    width: clamp(175px, 20vw, 230px);
+    transform: rotate(-10deg);
 }
 
 .film-sticker:nth-child(2) {
-    right: 34%;
-    bottom: 0;
-    width: clamp(90px, 9vw, 120px);
-    transform: rotate(-6deg);
+    top: 450px;
+    right: -200px;
+    width: clamp(185px, 21vw, 240px);
+    transform: rotate(0deg);
 }
 
 .film-sticker:nth-child(3) {
-    top: 0;
-    left: 7%;
-    width: clamp(105px, 11vw, 140px);
-    transform: rotate(-6deg);
+    top: 45%;
+    left: -160px;
+    width: clamp(190px, 22vw, 250px);
+    transform: rotate(8deg);
 }
 
 .film-sticker:nth-child(4) {
-    bottom: 0;
-    right: 7%;
-    width: clamp(95px, 10vw, 130px);
-    transform: rotate(7deg);
+    top: 80%;
+    right: 1120px;
+    width: clamp(190px, 22vw, 250px);
+    /* transform: rotate(0deg); */
 }
 
 .film-sticker:nth-child(5) {
-    top: 0;
-    left: 43%;
-    width: clamp(88px, 9vw, 115px);
-    transform: rotate(-5deg);
+    bottom: -62px;
+    left: 4%;
+    width: clamp(185px, 20vw, 230px);
+    transform: rotate(7deg);
 }
 
 .film-sticker:nth-child(6) {
-    right: 48%;
-    bottom: 0;
-    width: clamp(88px, 9vw, 115px);
-    transform: rotate(5deg);
-}
-
-.film-sticker:nth-child(7) {
-    bottom: 0;
-    left: 7%;
-    width: clamp(95px, 10vw, 130px);
-    transform: rotate(-7deg);
-}
-
-.film-sticker:nth-child(8) {
-    top: 0;
-    left: 70%;
-    width: clamp(88px, 9vw, 115px);
-    transform: rotate(5deg);
+    right: 4%;
+    bottom: -68px;
+    width: clamp(185px, 20vw, 235px);
+    transform: rotate(-8deg);
 }
 .media-viewer {
     position: fixed;
@@ -1267,6 +1256,7 @@ body.has-scroll-reveal .reveal.is-visible {
     .letter-section-content {
         grid-template-columns: 1fr;
         gap: 0.3rem;
+        padding-top: 2.5rem;
         text-align: center;
     }
 
@@ -1342,6 +1332,7 @@ body.has-scroll-reveal .reveal.is-visible {
     .film-content {
         grid-template-columns: 1fr;
         gap: 1.25rem;
+        padding-top: 5rem;
     }
 
     .film-video-card {
@@ -1349,154 +1340,79 @@ body.has-scroll-reveal .reveal.is-visible {
         margin: auto;
     }
 
-    .hero-sticker,
-    .letter-sticker,
-    .film-sticker {
-        max-width: 24vw;
-    }
-
     .film-stickers {
-        inset: -8rem 0 -8rem;
+        inset: -3rem -1rem;
     }
 
-    .hero-sticker:first-child {
-        top: 2%;
-        left: 2%;
-        width: 22vw;
-        max-height: 82px;
+    .hero-sticker:first-child,
+    .letter-sticker:first-child,
+    .film-sticker:first-child {
+        top: -36px;
+        left: -22px;
+        width: clamp(108px, 30vw, 125px);
+        height: clamp(105px, 24svh, 150px);
     }
 
-    .hero-sticker:nth-child(2) {
-        top: 4%;
-        left: 27%;
-        width: 20vw;
-        max-height: 82px;
+    .hero-sticker:nth-child(2),
+    .letter-sticker:nth-child(2),
+    .film-sticker:nth-child(2) {
+        top: -36px;
+        right: 32%;
+        left: auto;
+        width: clamp(92px, 25vw, 105px);
+        height: clamp(105px, 24svh, 150px);
     }
 
-    .hero-sticker:nth-child(3) {
-        top: 2%;
-        left: 51%;
-        width: 22vw;
-        max-height: 82px;
+    .hero-sticker:nth-child(3),
+    .letter-sticker:nth-child(3),
+    .film-sticker:nth-child(3) {
+        top: -36px;
+        right: -22px;
+        width: clamp(108px, 30vw, 125px);
+        height: clamp(105px, 24svh, 150px);
     }
 
-    .hero-sticker:nth-child(4) {
-        top: 4%;
-        left: 72%;
-        width: 22vw;
-        max-height: 82px;
+    .hero-sticker:nth-child(4),
+    .letter-sticker:nth-child(4),
+    .film-sticker:nth-child(4) {
+        top: 42%;
+        left: -200px;
+        width: 190px;
+        height: 150px;
     }
 
-    .letter-sticker:first-child {
-        top: 1%;
-        left: 4%;
-        width: 22vw;
-        max-height: 78px;
+    .hero-sticker:nth-child(5),
+    .letter-sticker:nth-child(6),
+    .film-sticker:nth-child(5) {
+        bottom: -55px;
+        left: -80px;
+        width: clamp(112px, 32vw, 145px);
+        height: clamp(105px, 24svh, 150px);
     }
 
-    .letter-sticker:nth-child(2) {
-        top: 2%;
-        left: 40%;
-        width: 20vw;
-        max-height: 78px;
+    .hero-sticker:nth-child(6),
+    .letter-sticker:nth-child(8),
+    .film-sticker:nth-child(6) {
+        right: -80px;
+        bottom: -58px;
+        width: clamp(112px, 32vw, 145px);
+        height: clamp(105px, 24svh, 150px);
     }
 
-    .letter-sticker:nth-child(3) {
-        top: 1%;
-        right: 4%;
-        width: 22vw;
-        max-height: 78px;
-    }
-
-    .letter-sticker:nth-child(4) {
-        top: 46%;
-        right: 5%;
-        width: 20vw;
-        max-height: 78px;
-    }
-
-    .letter-sticker:nth-child(5) {
-        bottom: 2%;
-        left: 4%;
-        width: 22vw;
-        max-height: 78px;
-    }
-
-    .letter-sticker:nth-child(6) {
-        bottom: 2%;
-        left: 40%;
-        width: 20vw;
-        max-height: 78px;
+    .letter-sticker:nth-child(5),
+    .film-sticker:nth-child(4) {
+        right: -150px;
+        left: auto;
+        width: 190px;
+        height: 150px;
     }
 
     .letter-sticker:nth-child(7) {
-        right: 4%;
-        bottom: 2%;
-        width: 22vw;
-        max-height: 78px;
+        display: none;
     }
 
-    .letter-sticker:nth-child(8) {
-        top: 46%;
-        left: 5%;
-        width: 20vw;
-        max-height: 78px;
-    }
-
-    .film-sticker:first-child {
-        top: 0;
-        right: 3%;
-        width: 22vw;
-        max-height: 88px;
-    }
-
-    .film-sticker:nth-child(2) {
-        left: 28%;
-        bottom: 0;
-        width: 21vw;
-        max-height: 88px;
-    }
-
-    .film-sticker:nth-child(3) {
-        top: 0;
-        left: 3%;
-        width: 21vw;
-        max-height: 88px;
-    }
-
-    .film-sticker:nth-child(4) {
-        right: 3%;
-        bottom: 0;
-        width: 21vw;
-        max-height: 88px;
-    }
-
-    .film-sticker:nth-child(5) {
-        top: 0;
-        left: 28%;
-        width: 20vw;
-        max-height: 88px;
-    }
-
-    .film-sticker:nth-child(6) {
-        left: 54%;
-        bottom: 0;
-        width: 20vw;
-        max-height: 88px;
-    }
-
-    .film-sticker:nth-child(7) {
-        bottom: 0;
-        left: 3%;
-        width: 21vw;
-        max-height: 88px;
-    }
-
-    .film-sticker:nth-child(8) {
-        top: 0;
-        left: 54%;
-        width: 20vw;
-        max-height: 88px;
+    .hero-sticker:nth-child(4) {
+        display: none;
     }
 }
 
